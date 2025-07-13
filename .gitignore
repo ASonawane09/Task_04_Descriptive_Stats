@@ -1,0 +1,22 @@
+# Ignore datasets and result files
+datasets/
+results/
+*.csv
+*.json
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Python cache and build files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+results/ # Exclude large result files
+results/
+*.json
