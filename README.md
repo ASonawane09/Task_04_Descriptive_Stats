@@ -69,6 +69,35 @@ results/*.json
 GitHub restricts uploads of files larger than 100MB, and one of the result files (`fb_ads_summary.json`) was ~2GB. So it's essential these are ignored in version control.
 
 ---
+**Performance Evaluation**
+
+| Criteria              | Pure Python      | Pandas               | Polars               |
+| --------------------- | ---------------- | -------------------- | -------------------- |
+| **Speed**             | 🟥 Slowest       | 🟨 Moderate          | 🟩 Fastest           |
+| **Ease of Use**       | 🟥 Complex loops | 🟩 High-level syntax | 🟩 High-level syntax |
+| **Memory Efficiency** | 🟨 Basic         | 🟥 Higher usage      | 🟩 Optimized         |
+| **Completeness**      | 🟩 Full control  | 🟩 Rich feature set  | 🟩 Rich feature set  |
+| **File Size**         | 🟨 Small outputs | 🟥 Large JSON        | 🟥 Large JSON        |
+| **Visualization**     | ❌ Not included   | ✅ Easy w/ matplotlib | ✅ Easy w/ matplotlib |
+
+**Speed Comparison**
+
+| Dataset                 | Pure Python | Pandas    | Polars    |
+| ----------------------- | ----------- | --------- | --------- |
+| fb\_ads (\~1.9 GB JSON) | ⚠️ 5–10 min | ⏳ 2–4 min | ✅ \~1 min |
+| fb\_posts (\~few MBs)   | ✅ \~15 sec  | ✅ \~5 sec | ✅ \~3 sec |
+| twitter\_posts          | ✅ \~20 sec  | ✅ \~6 sec | ✅ \~4 sec |
+
+**Conclusion**
+
+**Polars** - Best Performing Library 
+Fastest and most memory-efficient
+Scales well for large datasets
+Maintains DataFrame-style usability
+
+**Pandas**— Easy to use, but slower with big files
+
+**Pure Python** — Least Efficient - educational but impractical for large-scale data
 
 ## 👩‍💻 Author
 
